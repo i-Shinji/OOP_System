@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.inventorymanagement.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="104.0" layoutY="42.0" prefHeight="600.0" prefWidth="503.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="497.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imgBackground" fitHeight="601.0" fitWidth="509.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="509.0" prefHeight="601.0" prefWidth="497.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="showPassword" layoutX="100.0" layoutY="301.0" prefHeight="20.0" prefWidth="300.0" styleClass="text-field" stylesheets="@../design/style.css">
+                     <font>
+                        <Font name="Fredoka SemiBold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtUser" layoutX="99.0" layoutY="242.0" prefHeight="20.0" prefWidth="300.0" promptText="Username" styleClass="text-field" stylesheets="@../design/style.css">
+                     <font>
+                        <Font name="Fredoka SemiBold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="txtPassword" layoutX="99.0" layoutY="301.0" onKeyPressed="#handleEnterKey" prefHeight="20.0" prefWidth="300.0" promptText="Password" styleClass="password-field" stylesheets="@../design/style.css">
+                     <font>
+                        <Font name="Fredoka SemiBold" size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <JFXButton fx:id="login" alignment="CENTER" layoutX="99.0" layoutY="390.0" onMouseClicked="#login" prefHeight="61.0" prefWidth="334.0" style="-fx-background-color: black;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXCheckBox fx:id="checkBox" checkedColor="WHITE" layoutX="99.0" layoutY="351.0" onAction="#showPassword" stylesheets="@../design/style.css" text="Show password" unCheckedColor="BLACK">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label layoutX="201.0" layoutY="167.0" stylesheets="@../design/style.css" text="Login">
+                     <font>
+                        <Font name="Ebrima Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgLogo" fitHeight="82.0" fitWidth="97.0" layoutX="201.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

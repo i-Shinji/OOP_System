@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+.text-field, .password-field {
+    -fx-padding: 10px; /* Indentation for the text */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #000; /* Light border color */
+    -fx-background-color: #f7f7f7; /* Light background for input fields */
+    -fx-prompt-text-fill: #000;
+    -fx-font-family: 'Montserrat';
+    -fx-font-weight: bold;
+}
+
+.text-stock {
+    -fx-font-family: "Roboto";
+    -fx-font-weight: bold;/* Font applied here */
+    -fx-text-fill: #fff;
+    -fx-font-size: 30px;
+}
+
+
+.ex-button {
+    -fx-background-color: lightgrey; /* Green color */
+    -fx-text-fill: #000;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-width: 0;
+    -fx-font-family: "Roboto";
+    -fx-font-weight: bold;/* Font applied here */
+    
+}
+.ex-button:hover {
+    -fx-background-color: lightgrey; /* Green color */
+
+}
+
+.ex-button2 {
+    -fx-background-color: lightgrey; /* Green color */
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-width: 0;
+    -fx-font-family: "Roboto";
+    -fx-font-weight: bold;/* Font applied here */
+    
+}
+.ex-button2:hover {
+    -fx-background-color: lightgrey; /* Green color */
+
+}
+
+.spacings {
+    -fx-spacing: 20;
+}
+
+.ex-button:hover {
+    -fx-background-color: #333;
+}
+
+.ex-inventory-table {
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+    -fx-background-color: #eaeaea;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", Arial, sans-serif; /* Font applied here */
+}
+
+.inventory-table .table-row-cell {
+    -fx-background-color: #ffffff;
+}
+
+.inventory-table .table-row-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+.inventory-table .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-padding: 10;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", Arial, sans-serif; /* Font applied here */
+}
+
+.inventory-table .table-cell {
+    -fx-alignment: center-left;
+    -fx-padding: 10;
+}
+
+.inventory-table .table-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.inventory-table .table-cell:selected {
+    -fx-background-color: #d1e1fd;
+}
+
+.inventory-table .table-cell .text {
+    -fx-text-fill: #333333;
+}
+
+/* Column Header Styling */
+.inventory-table .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.add-stock-btn {
+    -fx-background-color: #000; /* Green color */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-width: 0;
+    -fx-font-family: "Segoe UI", Arial, sans-serif; /* Font applied here */
+    -fx-font-weight: bold;
+}
+
+.add-stock-btn:hover {
+    -fx-background-color: #45a049;
+}
+
+.add-stock-btn:pressed {
+    -fx-background-color: #388e3c;
+}
+
+.add-stock-btn:focus {
+    -fx-background-color: #388e3c;
+    -fx-text-fill: white;
+}
+
+
+.label-text {
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 18px; /* Set default size */
+    -fx-font-weight: bold;
+}
+
+.sidebar {
+    -fx-background-color: #000000; /* Black background */
+    -fx-padding: 10px;
+    -fx-alignment: center-left; /* Align contents to the left */
+    -fx-pref-height: 50px; /* Set height */
+    -fx-spacing: 10px; /* Space between icon and text */
+    -fx-border-color: #2e2e2e; /* Optional: border for better visibility */
+    -fx-border-width: 0 0 1px 0; /* Border only at the bottom */
+    
+    -fx-font-family: 'Roboto'; /* Ensure Roboto is imported in your project */
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff; /* White color */
+    -fx-font-weight: bold;
+}
+
+.sidebar2 {
+    -fx-background-color: lightgrey; /* Black background */
+    -fx-padding: 10px;
+    -fx-alignment: center-left; /* Align contents to the left */
+    -fx-pref-height: 50px; /* Set height */
+    -fx-spacing: 10px; /* Space between icon and text */
+    -fx-border-color: grey; /* Optional: border for better visibility */
+    -fx-border-width: 0 0 1px 0; /* Border only at the bottom */
+    
+    -fx-font-family: 'Roboto'; /* Ensure Roboto is imported in your project */
+    -fx-font-size: 14px;
+    -fx-text-fill: #0d0d0d; /* White color */
+    -fx-font-weight: bold;
+}
+
+.testss2 {
+
+    -fx-background-radius: 10;
+
+}
+
+.testss2 {
+
+    -fx-background-radius: 30;
+
+}
+
+.transparent-gray {
+    -fx-background-color: rgba(128, 128, 128, 0.5); /* Transparent gray */
+}
+
+
+
+
+
+
+
+
+
