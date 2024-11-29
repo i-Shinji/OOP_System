@@ -81,9 +81,8 @@ public class DashboardController implements Initializable {
             
             while (resultSet.next()) {
                 stockList.add(new Stock(
-                        resultSet.getString("id"), 
+                        resultSet.getString("id"),
                         resultSet.getString("name"), 
-                        resultSet.getString("price"),
                         resultSet.getString("description"), 
                         resultSet.getString("category")));
                 
@@ -185,8 +184,7 @@ public class DashboardController implements Initializable {
         String price = txtPrice.getText();
         String description = txtDescription.getText();
         String category = txtCategory.getText();
-        
-        
+
         query = "INSERT INTO `stock`(`id`, `name`, `price`, `description`, `category`)"+ "VALUES (?,?,?,?,?)";
     }
     

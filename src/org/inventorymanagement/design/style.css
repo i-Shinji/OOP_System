@@ -35,20 +35,19 @@
     
 }
 .ex-button:hover {
-    -fx-background-color: lightgrey; /* Green color */
+    -fx-background-color: lightgrey; 
 
 }
 
 .ex-button2 {
-    -fx-background-color: lightgrey; /* Green color */
+    -fx-background-color: lightgrey; 
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
     -fx-padding: 10 20;
     -fx-background-radius: 5;
     -fx-border-width: 0;
     -fx-font-family: "Roboto";
-    -fx-font-weight: bold;/* Font applied here */
-    
+    -fx-font-weight: bold;
 }
 .ex-button2:hover {
     -fx-background-color: lightgrey; /* Green color */
@@ -141,6 +140,12 @@
 .label-text {
     -fx-font-family: 'Roboto';
     -fx-font-size: 18px; /* Set default size */
+    -fx-font-weight: bold;
+}
+
+.label-text2 {
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 14px; /* Set default size */
     -fx-font-weight: bold;
 }
 
