@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package org.inventorymanagement.controller;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -15,19 +13,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
-public class DashboardAboutController implements Initializable {
 
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
-
+public class DashboardGeneralInventoryController implements Initializable {
+    
+    
+    
+    @FXML
     public void performClickGeneralInventory(ActionEvent event) throws IOException {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardInvGeneral.fxml"));
@@ -36,7 +27,7 @@ public class DashboardAboutController implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
-    
+    @FXML
     public void performClickDashboard(ActionEvent event) throws IOException {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardHome.fxml"));
@@ -46,6 +37,7 @@ public class DashboardAboutController implements Initializable {
             stage.show();
         }
     
+    @FXML
     public void performClickAbout(ActionEvent event) throws IOException {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardAbout.fxml"));
@@ -55,6 +47,27 @@ public class DashboardAboutController implements Initializable {
             stage.show();
         }
     
+    @FXML
+    public void performClickCategory(ActionEvent event) throws IOException {
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardCategory.fxml"));
+            Scene scene = new Scene(root);
+            
+            stage.setScene(scene);
+            stage.show();
+        }
+    
+    @FXML
+    public void performClickInventoryList(ActionEvent event) throws IOException {
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardInventory.fxml"));
+            Scene scene = new Scene(root);
+            
+            stage.setScene(scene);
+            stage.show();
+        }
+    
+    @FXML
     public void performClickLogout(ActionEvent event) throws IOException {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/loginView.fxml"));
@@ -63,7 +76,9 @@ public class DashboardAboutController implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
-
-     
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
     
 }

@@ -16,14 +16,14 @@
                   <Insets />
                </BorderPane.margin>
                <children>
-                  <JFXButton layoutX="29.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" ripplerFill="#fff9f9" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Dashboard" textFill="WHITE">
+                  <JFXButton layoutX="29.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickDashboard" ripplerFill="#fff9f9" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="Segoe UI Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="290.0" layoutY="21.0" lineSpacing="20.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="About" />
-                  <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
-                  <JFXButton layoutX="873.0" layoutY="21.0" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
+                  <JFXButton layoutX="290.0" layoutY="21.0" lineSpacing="20.0" onAction="#performClickAbout" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="About" />
+                  <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickGeneralInventory" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
+                  <JFXButton layoutX="873.0" layoutY="21.0" onAction="#performClickLogout" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
                   <JFXButton layoutX="730.0" layoutY="21.0" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Settings" />
                </children>
             </AnchorPane>

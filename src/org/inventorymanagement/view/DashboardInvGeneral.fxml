@@ -3,17 +3,19 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.inventorymanagement.controller.DashboardInventoryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.inventorymanagement.controller.DashboardGeneralInventoryController">
    <children>
       <BorderPane layoutX="121.0" layoutY="160.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="80.0" prefWidth="1000.0" styleClass="spacings" stylesheets="@../design/style.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
                <children>
                   <JFXButton layoutX="29.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickDashboard" ripplerFill="#fff9f9" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Dashboard" textFill="WHITE">
                      <font>
@@ -25,13 +27,10 @@
                   <JFXButton layoutX="873.0" layoutY="21.0" onAction="#performClickLogout" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
                   <JFXButton layoutX="730.0" layoutY="21.0" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Settings" />
                </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eaeaea;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
@@ -39,27 +38,22 @@
                   <Insets bottom="50.0" />
                </BorderPane.margin>
                <children>
-                  <AnchorPane layoutX="27.0" layoutY="79.0" prefHeight="58.0" prefWidth="947.0" style="-fx-background-color: white;">
+                  <AnchorPane layoutX="27.0" layoutY="79.0" prefHeight="372.0" prefWidth="947.0" style="-fx-background-color: white;">
                      <children>
-                        <Label layoutX="14.0" layoutY="18.0" text="All Items">
+                        <JFXButton layoutY="8.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickCategory" prefHeight="50.0" prefWidth="473.0" ripplerFill="#fff9f9" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Category list" textFill="WHITE">
                            <font>
-                              <Font name="Segoe UI Bold" size="18.0" />
+                              <Font name="Segoe UI Bold" size="12.0" />
                            </font>
-                        </Label>
-                        <JFXButton layoutX="831.0" layoutY="10.0" onAction="#performClickAddStock" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Add Item" />
-                        <JFXButton layoutX="722.0" layoutY="10.0" onMouseClicked="#refreshTable" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Refresh" />
-                     </children>
-                  </AnchorPane>
-                  <TableView fx:id="stockTable" layoutX="26.0" layoutY="135.0" prefHeight="316.0" prefWidth="949.0" styleClass="inventory-table" stylesheets="@../design/style.css">
-                    <columns>
-                      <TableColumn fx:id="colId" prefWidth="47.0" text="ID" />
-                        <TableColumn fx:id="colName" prefWidth="310.0" text="Item Name" />
-                        <TableColumn fx:id="colQuantity" prefWidth="194.0" text="Quantity" />
-                        <TableColumn fx:id="colCategory" prefWidth="229.0" text="Category" />
-                        <TableColumn fx:id="colActions" prefWidth="168.0" text="Actions" />
-                    </columns>
-                  </TableView>
-                  <Label layoutX="27.0" layoutY="27.0" text="Inventory List">
+                        </JFXButton>
+                        <JFXButton layoutX="476.0" layoutY="8.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickInventoryList" prefHeight="50.0" prefWidth="473.0" ripplerFill="#fff9f9" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Inventory list" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="305.0" fitWidth="473.0" layoutY="58.0" onMouseClicked="#performClickCategory" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="305.0" fitWidth="473.0" layoutX="475.0" layoutY="58.0" onMouseClicked="#performClickInventoryList" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+                  <Label layoutX="27.0" layoutY="21.0" text="General Inventory">
                      <font>
                         <Font name="Segoe UI Bold" size="24.0" />
                      </font>

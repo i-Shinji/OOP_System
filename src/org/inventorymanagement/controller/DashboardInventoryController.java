@@ -71,9 +71,9 @@ public class DashboardInventoryController implements Initializable {
     }
 
     @FXML
-    public void performClickInventory(ActionEvent event) throws IOException {
+    public void performClickGeneralInventory(ActionEvent event) throws IOException {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardInventory.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardInvGeneral.fxml"));
             Scene scene = new Scene(root);
             
             stage.setScene(scene);
