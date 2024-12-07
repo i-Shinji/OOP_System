@@ -11,17 +11,26 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import org.inventorymanagement.data.DBConnect;
+import org.inventorymanagement.stock.Stock;
+import org.inventorymanagement.utils.TableUtil;
 
 
 public class DashboardCategoryController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private TableColumn<Stock, String> colCategory;
+    @FXML
+    private TableView<Stock> stockTable;
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        TableUtil.loadData(stockTable, colCategory);
     } 
     
     
@@ -64,5 +73,10 @@ public class DashboardCategoryController implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
+    
+
+            
+            
+            
     
 }

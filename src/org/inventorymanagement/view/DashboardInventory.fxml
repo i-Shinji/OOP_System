@@ -47,7 +47,7 @@
                            </font>
                         </Label>
                         <JFXButton layoutX="831.0" layoutY="10.0" onAction="#performClickAddStock" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Add Item" />
-                        <JFXButton layoutX="722.0" layoutY="10.0" onMouseClicked="#refreshTable" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Refresh" />
+                        <JFXButton layoutX="722.0" layoutY="10.0" onAction="#performClickRefreshTable" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Refresh" />
                      </children>
                   </AnchorPane>
                   <TableView fx:id="stockTable" layoutX="26.0" layoutY="135.0" prefHeight="316.0" prefWidth="949.0" styleClass="inventory-table" stylesheets="@../design/style.css">

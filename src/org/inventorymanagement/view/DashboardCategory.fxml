@@ -41,9 +41,9 @@
                <children>
                   <AnchorPane layoutX="27.0" layoutY="79.0" prefHeight="372.0" prefWidth="947.0" style="-fx-background-color: white;">
                      <children>
-                        <TableView layoutX="357.0" layoutY="20.0" prefHeight="372.0" prefWidth="947.0" styleClass="inventory-table" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="stockTable" layoutX="357.0" layoutY="20.0" prefHeight="372.0" prefWidth="947.0" styleClass="inventory-table" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn prefWidth="946.0" text="Category" />
+                            <TableColumn fx:id="colCategory" prefWidth="946.0" text="Category" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>

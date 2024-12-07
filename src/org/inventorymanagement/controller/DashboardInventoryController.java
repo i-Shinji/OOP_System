@@ -33,25 +33,12 @@ import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import org.inventorymanagement.data.DBConnect;
 import org.inventorymanagement.stock.Stock;
+import org.inventorymanagement.utils.TableUtil;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
+
 public class DashboardInventoryController implements Initializable {
 
-    @FXML
-    private AnchorPane mainPane;
-
-    
-
-    String query = null;
-    Connection connection = null;
-    PreparedStatement st = null;
-    ResultSet resultSet = null;
-    Stock stock = null;
-    
+   
     private ObservableList<Stock> stockList = FXCollections.observableArrayList();
     @FXML
     private TableView<Stock> stockTable;
@@ -67,7 +54,7 @@ public class DashboardInventoryController implements Initializable {
     private TableColumn<Stock, String> colName;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        loadData();
+        TableUtil.loadData(stockTable, colId,colName,colQuantity,colCategory);
     }
 
     @FXML
@@ -121,41 +108,10 @@ public class DashboardInventoryController implements Initializable {
         }
     
     @FXML
-    private void refreshTable() {
-        try {
-            stockList.clear();
-            
-            query = "SELECT * FROM `stock`";
-            st = connection.prepareCall(query);
-            resultSet = st.executeQuery();
-            
-            while (resultSet.next()) {
-                stockList.add(new Stock(
-                        resultSet.getString("id"),
-                        resultSet.getString("name"), 
-                        resultSet.getString("quantity"), 
-                        resultSet.getString("category")));
-                
-                stockTable.setItems(stockList);
-            }
-            
-            
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void performClickRefreshTable(ActionEvent event) throws IOException {
+        TableUtil.refreshTable(stockTable);
     }
-    
-    
-    public void loadData() {
-        connection = DBConnect.getConnect();
-        refreshTable();
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
-    }
-      
+     
     }
     
 

@@ -74,7 +74,7 @@
 }
 
 .inventory-table .table-row-cell {
-    -fx-background-color: #ffffff;
+    -fx-background-color: #000;
 }
 
 .inventory-table .table-row-cell:hover {

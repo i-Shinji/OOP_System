@@ -28,6 +28,7 @@ import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import org.inventorymanagement.data.DBConnect;
 import org.inventorymanagement.stock.Stock;
+import org.inventorymanagement.utils.StockUtil;
 
 
 public class DashboardAddStockController implements Initializable {
@@ -90,64 +91,14 @@ public class DashboardAddStockController implements Initializable {
                 .showError();
         return;
     } else {
-            getQuery();
-            insert();
+            StockUtil.getQuery();
+            StockUtil.insert();
             
-          clearFields();
+          StockUtil.clearFields();
 
         }
         
     }
-    
-    private void clearFields() {
-        txtName.setText("");
-        txtQuantity.setText("");
-        txtCategory.setText("");
-    }
-    
-    private void insert() {
-        
-        try {
-            
-            st = connection.prepareStatement(query);
-            st.setString(1, null);
-            st.setString(2, txtName.getText());
-            st.setString(3, txtQuantity.getText());
-            st.setString(4, txtCategory.getText());
-            st.execute();
-            
-                Notifications.create()
-                .title("Success")
-                .text("Stock added successfully!")
-                .position(Pos.CENTER)
-                .hideAfter(Duration.seconds(3))
-                .showConfirm();
-                
-                
-            
-        }catch (SQLException ex) {
-                Notifications.create()
-                .title("Error")
-                .text("Failed to add stock. Check database connection.")
-                .position(Pos.CENTER)
-                .hideAfter(Duration.seconds(3))
-                .showError();
-        }
-        
-    }
-    
-    
-    private void getQuery() {
-        String name = txtName.getText();
-        String quantity = txtQuantity.getText();
-        String category = txtCategory.getText();
-        
-        
-        query = "INSERT INTO `stock`(`id`, `name`, `quantity`, `category`)"+ "VALUES (?,?,?,?)";
-    }
-    
-    
-    
     
 
     
