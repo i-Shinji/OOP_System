@@ -26,7 +26,6 @@
                   <JFXButton layoutX="290.0" layoutY="21.0" lineSpacing="20.0" onAction="#performClickAbout" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="About" />
                   <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickGeneralInventory" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
                   <JFXButton layoutX="873.0" layoutY="21.0" onAction="#performClickLogout" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
-                  <JFXButton layoutX="730.0" layoutY="21.0" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Settings" />
                </children>
             </AnchorPane>
          </top>
@@ -41,7 +40,7 @@
                <children>
                   <AnchorPane layoutX="27.0" layoutY="79.0" prefHeight="372.0" prefWidth="947.0" style="-fx-background-color: white;">
                      <children>
-                        <TableView fx:id="stockTable" layoutX="357.0" layoutY="20.0" prefHeight="372.0" prefWidth="947.0" styleClass="inventory-table" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="stockTable" layoutX="357.0" layoutY="20.0" prefHeight="372.0" prefWidth="947.0" styleClass="inventory-view" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
                             <TableColumn fx:id="colCategory" prefWidth="946.0" text="Category" />
                           </columns>

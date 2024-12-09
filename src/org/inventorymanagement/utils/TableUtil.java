@@ -13,6 +13,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
+import javafx.util.Callback;
 
 public class TableUtil {
 
@@ -38,20 +41,31 @@ public class TableUtil {
         return stockList;
     }
 
-    public static void loadData(TableView<Stock> stockTable,
-                                TableColumn<Stock, String> colId,
-                                TableColumn<Stock, String> colName,
-                                TableColumn<Stock, String> colQuantity,
-                                TableColumn<Stock, String> colCategory) {
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
-        refreshTable(stockTable);
-    }
+public static void loadData(TableView<Stock> stockTable,
+                            TableColumn<Stock, String> colId,
+                            TableColumn<Stock, String> colName,
+                            TableColumn<Stock, String> colQuantity,
+                            TableColumn<Stock, String> colCategory) {
+    colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+    colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+    colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+    colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
+    refreshTable(stockTable);
+}
+
+
     
     public static void loadData(TableView<Stock> stockTable, TableColumn<Stock, String> colCategory) {
         colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
         refreshTable(stockTable);
+
     }
+    
+  
+    
+    
+    
+    
+    
+
 }

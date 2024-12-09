@@ -25,7 +25,6 @@
                   <JFXButton layoutX="290.0" layoutY="21.0" lineSpacing="20.0" onAction="#performClickAbout" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="About" />
                   <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickGeneralInventory" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
                   <JFXButton layoutX="873.0" layoutY="21.0" onAction="#performClickLogout" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
-                  <JFXButton layoutX="730.0" layoutY="21.0" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Settings" />
                </children>
             </AnchorPane>
          </top>

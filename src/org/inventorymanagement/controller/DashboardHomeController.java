@@ -33,6 +33,7 @@ import javafx.stage.Stage;
 import org.inventorymanagement.data.DBConnect;
 import org.inventorymanagement.data.FXMLloader;
 import org.inventorymanagement.stock.Stock;
+import org.inventorymanagement.utils.TableUtil;
 
 
 public class DashboardHomeController implements Initializable {
@@ -49,24 +50,32 @@ public class DashboardHomeController implements Initializable {
     private TableColumn<Stock, String> colName;
     @FXML
     private TableView<Stock> stockTable;
+    @FXML
+    private TableView<Stock> categoryTable;
+    @FXML
+    private TableColumn<Stock, String> colList;
     
-    String query = null;
-    Connection connection = null;
-    PreparedStatement st = null;
-    ResultSet resultSet = null;
-    Stock stock = null;
-    private ObservableList<Stock> stockList = FXCollections.observableArrayList();
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        loadData();
+        TableUtil.loadData(stockTable, colId, colName, colQuantity, colCategory);
+        TableUtil.loadData(categoryTable, colList);
     }
     
     @FXML
-    public void performClickGeneralInventory(ActionEvent event) throws IOException {
+    public void performClickInventory(ActionEvent event) throws IOException {
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardInvGeneral.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardInventory.fxml"));
+            Scene scene = new Scene(root);
+            
+            stage.setScene(scene);
+            stage.show();
+        }
+    @FXML
+    public void performClickCategory(ActionEvent event) throws IOException {
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/DashboardCategory.fxml"));
             Scene scene = new Scene(root);
             
             stage.setScene(scene);
@@ -104,38 +113,6 @@ public class DashboardHomeController implements Initializable {
         }
     
     
-    private void refreshTable() {
-        try {
-            stockList.clear();
-            
-            query = "SELECT * FROM `stock`";
-            st = connection.prepareCall(query);
-            resultSet = st.executeQuery();
-            
-            while (resultSet.next()) {
-                stockList.add(new Stock(
-                        resultSet.getString("id"),
-                        resultSet.getString("name"), 
-                        resultSet.getString("quantity"), 
-                        resultSet.getString("category")));
-                
-                stockTable.setItems(stockList);
-            }
-            
-            
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-    public void loadData() {
-        connection = DBConnect.getConnect();
-        refreshTable();
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
-    }
+
     }
     

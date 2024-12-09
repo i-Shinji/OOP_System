@@ -11,14 +11,13 @@ import javafx.stage.StageStyle;
 
 
 
-public class LoginUI extends Application {
+public class Main extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
         
         Parent root = FXMLLoader.load(getClass().getResource("/org/inventorymanagement/view/loginView.fxml"));
-        
-        
+
         Scene scene = new Scene(root);
          
         stage.setScene(scene);
@@ -27,9 +26,7 @@ public class LoginUI extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        
 
-        
 
     }
     

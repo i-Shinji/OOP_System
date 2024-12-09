@@ -1,11 +1,14 @@
 
 package org.inventorymanagement.stock;
 
+import javafx.scene.control.Button;
+
 public class Stock {
     String id;
     String name;
     String category;
     String quantity;
+    
 
     public Stock(String id, String name, String quantity, String category) {
         this.id = id;
@@ -13,6 +16,7 @@ public class Stock {
         this.category = category;
         this.quantity = quantity;
     }
+    
     
     public String getId() {
         return id;
@@ -46,5 +50,7 @@ public class Stock {
     public void setCategory(String category) {
         this.category = category;
     }
+    
+
   
 }

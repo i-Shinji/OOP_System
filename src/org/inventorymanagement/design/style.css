@@ -73,44 +73,38 @@
     -fx-font-family: "Segoe UI", Arial, sans-serif; /* Font applied here */
 }
 
-.inventory-table .table-row-cell {
+.inventory-view {
+    -fx-background-color: #f5f5f5; /* Light gray background */
+    -fx-border-color: #ddd; /* Border color */
+    -fx-border-width: 1px;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-alignment: center;
+}
+
+
+.inventory-view .inv-column-header-background {
     -fx-background-color: #000;
 }
 
-.inventory-table .table-row-cell:hover {
-    -fx-background-color: #f5f5f5;
-}
-
-.inventory-table .column-header {
-    -fx-background-color: #f0f0f0;
-    -fx-text-fill: #333333;
-    -fx-padding: 10;
-    -fx-font-weight: bold;
-    -fx-font-family: "Segoe UI", Arial, sans-serif; /* Font applied here */
-}
-
-.inventory-table .table-cell {
-    -fx-alignment: center-left;
-    -fx-padding: 10;
-}
-
-.inventory-table .table-cell:empty {
-    -fx-background-color: transparent;
-}
-
-.inventory-table .table-cell:selected {
-    -fx-background-color: #d1e1fd;
-}
-
-.inventory-table .table-cell .text {
-    -fx-text-fill: #333333;
-}
-
-/* Column Header Styling */
-.inventory-table .column-header .label {
+.inventory-view .column-header {
+    -fx-background-color: #ffffff;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
+    -fx-border-color: #ddd;
 }
+
+.inventory-view .table-row-cell {
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #ddd;
+}
+
+.inventory-view .table-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 13px;
+}
+
+
 
 .add-stock-btn {
     -fx-background-color: #000; /* Green color */

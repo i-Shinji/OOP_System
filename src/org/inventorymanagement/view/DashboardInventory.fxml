@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -23,7 +24,6 @@
                   <JFXButton layoutX="290.0" layoutY="21.0" lineSpacing="20.0" onAction="#performClickAbout" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="About" />
                   <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickGeneralInventory" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
                   <JFXButton layoutX="873.0" layoutY="21.0" onAction="#performClickLogout" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
-                  <JFXButton layoutX="730.0" layoutY="21.0" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Settings" />
                </children>
                <BorderPane.margin>
                   <Insets />
@@ -47,21 +47,29 @@
                            </font>
                         </Label>
                         <JFXButton layoutX="831.0" layoutY="10.0" onAction="#performClickAddStock" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Add Item" />
-                        <JFXButton layoutX="722.0" layoutY="10.0" onAction="#performClickRefreshTable" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Refresh" />
+                        <JFXButton layoutX="731.0" layoutY="10.0" onAction="#performClickRefreshTable" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Refresh" />
+                        <JFXButton layoutX="636.0" layoutY="10.0" onAction="#removeStock" style="-fx-background-color: #0d0d0d;" styleClass="add-stock-btn" stylesheets="@../design/style.css" text="Delete" />
                      </children>
                   </AnchorPane>
-                  <TableView fx:id="stockTable" layoutX="26.0" layoutY="135.0" prefHeight="316.0" prefWidth="949.0" styleClass="inventory-table" stylesheets="@../design/style.css">
+                  <TableView fx:id="stockTable" editable="true" layoutX="26.0" layoutY="135.0" prefHeight="316.0" prefWidth="949.0" style="-fx-alignment: CENTER;" styleClass="inventory-view" stylesheets="@../design/style.css">
                     <columns>
-                      <TableColumn fx:id="colId" prefWidth="47.0" text="ID" />
-                        <TableColumn fx:id="colName" prefWidth="310.0" text="Item Name" />
-                        <TableColumn fx:id="colQuantity" prefWidth="194.0" text="Quantity" />
-                        <TableColumn fx:id="colCategory" prefWidth="229.0" text="Category" />
-                        <TableColumn fx:id="colActions" prefWidth="168.0" text="Actions" />
+                      <TableColumn fx:id="colId" prefWidth="107.0" sortable="false" style="-fx-alignment: CENTER;" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="361.0" sortable="false" style="-fx-alignment: CENTER;" text="Item Name" />
+                        <TableColumn fx:id="colQuantity" prefWidth="226.0" sortable="false" style="-fx-alignment: CENTER;" text="Quantity" />
+                        <TableColumn fx:id="colCategory" prefWidth="252.0" sortable="false" style="-fx-alignment: CENTER;" text="Category" />
                     </columns>
+                     <columnResizePolicy>
+                     </columnResizePolicy>
                   </TableView>
                   <Label layoutX="27.0" layoutY="27.0" text="Inventory List">
                      <font>
                         <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchFilter" layoutX="760.0" layoutY="29.0" prefHeight="25.0" prefWidth="198.0" promptText="item / category" />
+                  <Label layoutX="692.0" layoutY="30.0" text="Search">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
                      </font>
                   </Label>
                </children>

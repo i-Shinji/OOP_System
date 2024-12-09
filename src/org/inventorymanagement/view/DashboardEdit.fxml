@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="497.0" styleClass="testss2" stylesheets="@../design/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.inventorymanagement.controller.DashboardAddStockController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="497.0" styleClass="testss2" stylesheets="@../design/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.inventorymanagement.controller.DashboardEditController">
    <children>
       <AnchorPane layoutX="41.0" layoutY="-11.0" prefHeight="516.0" prefWidth="497.0" styleClass="transparent-gray" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,7 +23,7 @@
                      </font>
                   </Label>
                   <JFXButton fx:id="enter" layoutX="176.0" layoutY="364.0" onMouseClicked="#save" prefHeight="63.0" prefWidth="147.0" style="-fx-background-color: white;" styleClass="ex-button" text="Enter" />
-                  <JFXButton fx:id="close" layoutX="378.0" layoutY="14.0" onAction="#performClickClose" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: white;" styleClass="ex-button" text="Close" />
+                  <JFXButton fx:id="enter1" layoutX="378.0" layoutY="14.0" onAction="#performClickClose" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: white;" styleClass="ex-button" text="Close" />
                   <TextField fx:id="txtQuantity" layoutX="99.0" layoutY="221.0" maxWidth="-Infinity" prefHeight="35.0" prefWidth="300.0" />
                   <Label layoutX="37.0" layoutY="231.0" styleClass="label-text2" text="Quantity:" textFill="WHITE" />
                   <TextField fx:id="txtCategory" layoutX="100.0" layoutY="264.0" maxWidth="-Infinity" prefHeight="35.0" prefWidth="300.0" />
