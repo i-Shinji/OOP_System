@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -85,4 +86,32 @@ public class DashboardCategoryController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+@FXML
+private void performClickOpen(ActionEvent event) throws IOException {
+    // Get the selected stock item from the table
+    Stock selectedCategory = stockTable.getSelectionModel().getSelectedItem();
+
+    if (selectedCategory != null) {
+        // Load the new FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/inventorymanagement/view/DashboardSpecificInventory.fxml"));
+        Parent root = loader.load();
+
+        // Get the controller of the new scene
+        DashboardSpecificController specificController = loader.getController();
+
+        // Pass the selected category to the specific controller
+        specificController.setSelectedCategory(selectedCategory);
+
+        // Set the scene and show the new window
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    } else {
+        // Alert the user if no category is selected
+        Alert alert = new Alert(Alert.AlertType.WARNING, "Please select a category before proceeding.");
+        alert.showAndWait();
+    }
+}
 }

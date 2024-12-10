@@ -42,7 +42,7 @@
                      <children>
                         <TableView fx:id="stockTable" layoutX="357.0" layoutY="20.0" prefHeight="372.0" prefWidth="947.0" styleClass="inventory-view" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn fx:id="colCategory" prefWidth="946.0" text="Category" />
+                            <TableColumn fx:id="colCategory" prefWidth="946.0" style="-fx-alignment: CENTER;" text="Category" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -51,6 +51,11 @@
                         <Font name="Segoe UI Bold" size="24.0" />
                      </font>
                   </Label>
+                  <JFXButton layoutX="888.0" layoutY="23.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickOpen" ripplerFill="#fff9f9" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Open" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
                </children>
             </AnchorPane>
          </center>

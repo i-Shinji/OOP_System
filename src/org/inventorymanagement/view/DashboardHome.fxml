@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -21,7 +23,7 @@
                      </font>
                   </JFXButton>
                   <JFXButton layoutX="290.0" layoutY="21.0" lineSpacing="20.0" onAction="#performClickAbout" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="About" />
-                  <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickInventory" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
+                  <JFXButton layoutX="161.0" layoutY="21.0" lineSpacing="20.0" maxWidth="-Infinity" onAction="#performClickGeneralInventory" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Inventory" />
                   <JFXButton layoutX="873.0" layoutY="21.0" onAction="#performClickLogout" prefHeight="45.0" prefWidth="118.0" ripplerFill="WHITE" style="-fx-background-color: #eaeaea;" styleClass="ex-button" stylesheets="@../design/style.css" text="Logout" />
                </children>
                <BorderPane.margin>
@@ -42,29 +44,35 @@
                      <children>
                         <AnchorPane layoutX="21.0" layoutY="52.0" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: lightgrey;">
                            <children>
-                              <TableView fx:id="categoryTable" layoutX="-68.0" layoutY="48.0" prefHeight="300.0" prefWidth="268.0" styleClass="inventory-view" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="categoryTable" layoutX="-68.0" layoutY="48.0" prefHeight="300.0" prefWidth="268.0" style="-fx-alignmet: CENTER;" styleClass="inventory-view" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TableColumn fx:id="colList" prefWidth="199.0" text="List" />
                                  </columns>
                               </TableView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="238.0" layoutY="113.0" prefHeight="239.0" prefWidth="336.0" style="-fx-background-color: lightgrey;">
+                        <AnchorPane layoutX="238.0" layoutY="66.0" prefHeight="239.0" prefWidth="336.0" style="-fx-background-color: lightgrey;">
                            <children>
-                              <TableView fx:id="stockTable" prefHeight="239.0" prefWidth="336.0" styleClass="inventory-view" stylesheets="@../design/style.css">
+                              <TableView fx:id="stockTable" layoutY="14.0" prefHeight="239.0" prefWidth="336.0" style="-fx-alignment: CENTER;" styleClass="inventory-view" stylesheets="@../design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TableColumn fx:id="colId" prefWidth="47.0" sortable="false" text="ID" />
-                                    <TableColumn fx:id="colName" prefWidth="82.0" sortable="false" text="Item Name" />
-                                    <TableColumn fx:id="colQuantity" prefWidth="76.0" sortable="false" text="Quantity" />
-                                    <TableColumn fx:id="colCategory" prefWidth="70.0" sortable="false" text="Category" />
-                                    <TableColumn fx:id="colActions" prefWidth="62.0" sortable="false" text="Actions" />
+                                    <TableColumn fx:id="colId" prefWidth="70.0" sortable="false" text="ID" />
+                                    <TableColumn fx:id="colName" prefWidth="88.0" sortable="false" text="Item Name" />
+                                    <TableColumn fx:id="colQuantity" prefWidth="78.0" sortable="false" text="Quantity" />
+                                    <TableColumn fx:id="colCategory" prefWidth="98.0" sortable="false" text="Category" />
                                  </columns>
                               </TableView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="597.0" layoutY="59.0" prefHeight="239.0" prefWidth="336.0" style="-fx-background-color: #eaeaea;" styleClass="testss" stylesheets="@../design/style.css" />
+                        <AnchorPane layoutX="597.0" layoutY="59.0" prefHeight="293.0" prefWidth="336.0" style="-fx-background-color: #eaeaea;" styleClass="testss" stylesheets="@../design/style.css">
+                           <children>
+                              <ImageView fitHeight="293.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/about2.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
                         <JFXButton layoutX="21.0" layoutY="14.0" onAction="#performClickCategory" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Category" />
-                        <JFXButton layoutX="238.0" layoutY="76.0" onAction="#performClickInventory" prefHeight="37.0" prefWidth="336.0" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Inventory list" />
+                        <JFXButton layoutX="238.0" layoutY="26.0" onAction="#performClickGeneralInventory" prefHeight="37.0" prefWidth="336.0" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="Inventory list" />
                         <JFXButton layoutX="597.0" layoutY="22.0" onAction="#performClickAbout" prefHeight="45.0" prefWidth="336.0" style="-fx-background-color: #0d0d0d;" styleClass="ex-button2" stylesheets="@../design/style.css" text="About" />
                      </children>
                   </AnchorPane>
